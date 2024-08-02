@@ -9,7 +9,7 @@
   <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
 
 <head>
-<title>Script HTML Untukmu</title>
+<title>Script Uji coba</title>
 <!-- 
   Made with love by Rayys!
      Blog: https://PalingIT.com
@@ -19,14 +19,18 @@
   Thanks to all <3
 -->
 </head>
+<style>
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
 <body>
 	
    <!-- Ganti Audio di sini -->
-   <audio src="https://faith-irene.github.io/lagu2.mp3" id="linkmp3" class="sembunyi"></audio>
+   <audio loop src="https://audio.jukehost.co.uk/zX5rqVN1n4ugasy1ZxQKH4l3iQxGgskh" id="linkmp3" class="sembunyi"></audio>
    
    <div id="bodyblur">
-     <!-- Wallpaper -->
-	<img src="https://faith-irene.github.io/wall.jpg" id="wallpaper"/>
+     <!-- Wallpaper --><img src="https://i.postimg.cc/1tymPxhp/wall.jpg" id="wallpaper"/>
    </div>
    
    <div id='Content'>
@@ -48,12 +52,12 @@
 
        <!-- Konten Pembukaan -->
        <p id="kalimat">Hai, </p>
-       <p id="kalimatb">Aku cuma mau bilang nih,</p>
-       <p id="kalimatb2">Good Morning, <b id="namakamu"></b>! Jangan lupa mandi, sarapan, dan semangat jalani harinya <3</p>
-       <p id="kalimatc">Gaboleh nyerah kalau ada masalah yaa.. 😍❤️</p>
+       <p id="kalimatb">Hanya ingin mengucapkan,</p>
+       <p id="kalimatb2">Selamat Pagi, Jangan lupa sarapan lah, sama harus semangat dalam menjalani hari <3</p>
+       <p id="kalimatc">Lakukanlah hal yang terbaik hari ini.. 😍❤️</p>
 
        <!-- Konten Pilihan Kado -->
-       <p id="kalimatd">Oh iya, coba pilih <b>kado</b> di bawah ini! 😆❤️</p>
+       <p id="kalimatd">Oh iya, bisa pilih <b>kado</b> di bawah ini! 😆❤️</p>
        <div id="kolombaru">
          <li><img src="https://feeldreams.github.io/kadoin.png" onClick="rnkado = 1;otomatis();"/></li>
          <li><img src="https://feeldreams.github.io/kadoin.png" onClick="rnkado = 2;otomatis();"/></li>
@@ -61,9 +65,11 @@
        </div>
        
        <!-- Konten Isi Kado -->
-       <p id="kado1">Selamat pagi! Maafin aku ya kalau sebelumnya udah bikin kamu marah, Aku Sayang Kamu 😍❤️</p>
-       <p id="kado2">Selamat pagi, <b id="namakamu2"></b>! Matahari boleh bersinar terik, tapi hanya <b id="namakamu3"></b> yang paling menarik 😆❤️</p>
-       <p id="kado3">Selamat pagi! Jangan lupa bahagia terus ya.. Aku di sini sangat menyayangimu 😍❤️</p>
+       <p id="kado1">Maafin lah.. hanya mau menyapa mu di pagi hari ini. 😍❤️</p>
+       <p id="kado2">  
+<br>Ada warik diatas dahan, <br> Turun ke bawah mengambil manggis, <br> Tiap mengingatmu merasa nyaman, <br> Oleh satu senyuman yang manis.  😆❤️
+</p>
+       <p id="kado3"> Jangan lupa untuk selalu bersyukur di pagi hari atas setiap momen baik di hari sebelumnya. <br> Dunia menjadi lebih bermakna jika kita selalu ingat akan karunia-Nya.  ❤️</p>
        
      </blockquote></div>
 
@@ -91,11 +97,11 @@
   async function mulainama() {
     suratin.style="display:none";ket.style="display:none";
     var { value: nama } = await swals.fire({
-           title: 'Masukin nama kamu', input: 'text',
+           title: 'Masukin nama panggilanmu', input: 'text',
        });
-       if(nama && nama.length < 11 ){
+       if(nama && nama.length < 7 ){
            if ( nama.toLowerCase() == "laila") {
-           window.nama = nama;namakamu.innerHTML=nama;namakamu2.innerHTML=nama;namakamu3.innerHTML=nama;
+         //  window.nama = nama;namakamu.innerHTML=nama;namakamu2.innerHTML=nama;
            kalimat.innerHTML+= nama + "! ❤️";
            kal1 = kalimat.innerHTML;kalimat.innerHTML="";
            kal2 = kalimatb.innerHTML;kalimatb.innerHTML="";
@@ -111,10 +117,10 @@
            setTimeout(mulaiketik1,500);fungsi=1;
           
             } else { 
-            await swals.fire('Ups!', 'Bukan Nama Panggilan Itu.. , jangan bohong. ');mulainama();
+            await swals.fire('Ups! Bohong', 'Bukan itu.. ');mulainama();
            }
        } else {
-           await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');mulainama();
+           await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 5 karakter, ya!');mulainama();
     }
   }
   
@@ -135,6 +141,9 @@
   audio = new Audio('' + linkmp3.src);
   
   function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+  
+  
+  
 </script>
 <!-- Sampai Sini -->
 </body>
